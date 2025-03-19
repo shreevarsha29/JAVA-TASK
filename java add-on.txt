@@ -1,0 +1,640 @@
+JAVA ADD-ON:
+
+JAVA : 
+   IT IS A PLATFORM INDEPENDENT LANGUAGE.
+
+1.what is JDK ?
+  Java Development Kit.(EXECUTABLE FILES ARE OBTAINED AND SENDS AS LIBRARIES, it is for development).
+   ->JRE: JAVA RUNTIME ENVIRONMENT.(it allows running java applications and includes the jvm and libraries,it is for execution).
+   --> JVM: (IT RUNS THE CODE AND EXECUTES THE CODE).
+
+COMPONENTS OF JAVA DEVELOPMENT KIT:
+ 	->COMPLIER:(javac) converts java code to byte code.
+	->JVM: executes the bytecode.
+
+JAVA METHODS:
+	*A method is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a method.
+
+Example code:
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("New Line");
+	system.out.print("Same Line");
+	system.out.printf("%d",10);
+    }
+}
+ output:
+
+New Line
+Same line10
+=== Code Execution Successful ===
+
+DATA TYPES:
+
+   		     DATA TYPES IN JAVA
+
+1. PRIMITIVE DATA TYPES  	2.NON-PRIMITIVE DATA TYPES
+    -->BOOLEAN				-->ARRAY
+    -->CHARACTER			-->CLASS
+    -->INTEGER				-->INTERFACES
+    -->FLOAT				-->STRING
+					-->ENUM	
+DATA TYPE:
+
+NAME	DEFAULT		SIZE	TYPE			EXAMPLE
+
+BYTE	0		8-BIT	INTEGRAL		byte b=100;
+SHORT	0		16-BIT	INTEGRAL		short s=1000;
+INT 	0 		32-BIT	INTEGRAL		int i=10000;
+LONG	0L		64-BIT	INTEGRAL		long l=999999;
+FLOAT	0.0l		32-BIT	FLOATING POINT		float f=123.4f;
+DOUBLE	0.0d 		64-BIT	FLOATING POINT		double d=12.4;
+BOOLEAN	FALSE		1-BIT	BOOLEAN			boolean b=true;
+CHAR	"\u0000"	16-BIT	CHARACTER		char c='c';
+
+
+SCANNER:
+  *scanner is used to read the user defined inputs in various source, it a common class to read the inputs
+
+example code :
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        String str=input.nextLine();
+        System.out.print(a+1);
+    }
+
+output: 
+15
+16
+=== Code Execution Successful ===
+
+CONTROL STATEMENT IN JAVA:
+
+1.CONDITIONAL STATEMENTS
+ 	*Java has the following conditional statements:
+
+	IF-->Use if to specify a block of code to be executed, if a specified condition is true
+	EXAMPLE : if (20 > 18) {
+                  System.out.println("20 is greater than 18");
+			}
+	EXAMPLE: TESTING VARIABLE IN IF STATEMENT.
+			int x = 20;
+			int y = 18;
+			if (x > y) {
+			  System.out.println("x is greater than y");
+			}
+	ELSE-->Use else to specify a block of code to be executed, if the same condition is false
+	IF ELSE-->Use else if to specify a new condition to test, if the first condition is false
+	SWITCH-->Use switch to specify many alternative blocks of code to be executed
+	EXAMPLE: 
+   		switch(variable)
+		{
+			case value1:
+				Sout statements;
+				break;
+			case value2:
+    				sout statements;
+				break;}
+2.LOOPING STATEMENTS
+       *Loops can execute a block of code as long as a specified condition is reached.
+
+	     1.WHILE-->(ENTRY CHECKED LOOP)The while loop loops through a block of code as long as a specified condition is true
+		EXAMPLE:int i = 0;
+			while (i < 5) {
+ 			 System.out.println(i);
+ 			 i++;
+				}
+
+`	     2.DO WHILE-->(EXIT LEVEL LOOP)The do/while loop is a variant of the while loop.
+ 		This loop will execute the code block once, before checking if the condition is true,
+		 then it will repeat the loop as long as the condition is true.
+		EXAMPLE:int i = 0;
+			do {
+			  System.out.println(i);
+			  i++;
+				}
+			while (i < 5);
+
+	     3. FOR LOOP-->(ENTRY CONTROL LOOP)When you know exactly how many times you want to loop through a block of code, 
+		use the for loop instead of a while loop:
+		EXAMPLE:for (int i = 0; i < 5; i++) {
+			  System.out.println(i);
+				}
+
+	      4.NESTED LOOP-->It is also possible to place a loop inside another loop. This is called a nested loop.
+
+  		The "inner loop" will be executed one time for each iteration of the "outer loop".
+		EXAMPLE:for (int i = 1; i <= 2; i++) {
+			  System.out.println("Outer: " + i); // Executes 2 times
+  
+			  // Inner loop
+			  for (int j = 1; j <= 3; j++) {
+			    System.out.println(" Inner: " + j);
+
+	     5. For-Each Loop-->There is also a "for-each" loop, which is used exclusively to loop through elements in an array (or other data sets):
+		SYNTAX:for (type variableName : arrayName) {
+ 			 // code block to be executed
+				}
+		EXAMPLE:String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+			for (String i : cars) {
+			  System.out.println(i);
+				}
+
+
+3.JUMP STATEMENTS:
+
+	1.Java Break-->The break statement can also be used to jump out of a loop.
+	 EXAMPLE:for (int i = 0; i < 10; i++) {
+  			if (i == 4) {
+  			  break;
+ 			 }
+			  System.out.println(i);
+			}
+	2.Java Continue-->The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+	 EXAMPLE:
+		for (int i = 0; i < 10; i++) {
+ 		 if (i == 4) {
+ 		   continue;
+ 		 }
+ 		 System.out.println(i);
+			}
+NOTE:You can also use break and continue in while loops:
+
+	--> Break Example:
+		int i = 0;
+		while (i < 10) {
+ 		 System.out.println(i);
+		  i++;
+		  if (i == 4) {
+		    break;
+  		}
+			}
+ 
+
+	-->Continue Example
+		int i = 0;
+		while (i < 10) {
+  		if (i == 4) {
+ 		   i++;
+ 		   continue;
+ 		 }
+ 		 System.out.println(i);
+		  i++;
+		}
+
+Java Arrays:
+	*Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+	*An Arrays is a data structure that can store multiple values of the same type in a single variable,
+	using a fixed-size memory block(homogeneous function).
+	*To declare an array, define the variable type with square brackets:
+example :String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+example:To create an array of integers, you could write:
+	int[] myNum = {10, 20, 30, 40};
+
+Access the Elements of an Array
+	*You can access an array element by referring to the index number.
+	*This statement accesses the value of the first element in cars:
+	Example:String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+		System.out.println(cars[0]);
+
+SINGLE DIMENSIONAL ARRAY:
+
+EXAMPLE CODE: SUM IN FOR LOOP,
+ 	class Main {
+    public static void main(String[] args) {
+        int sum=0;
+        int arr[]={1,4,5,8,9};
+        for(int i=0;i<arr.length;i++){
+        System.out.println(arr[i]);
+        sum+=arr[i];
+        System.out.println(sum);
+        }
+    }
+}
+OUTPUT:
+1
+1
+4
+5
+5
+10
+8
+18
+9
+27
+
+=== Code Execution Successful ===
+
+EXAMPLE CODE: COUNT IN FOR LOOP,
+	class Main {
+   		 public static void main(String[] args) {
+       		 int sum=0; int count=0;
+       		 int arr[]={1,4,5,8,9};
+       		 for(int i=0;i<arr.length;i++){
+       		 System.out.println(arr[i]);
+       		 sum+=arr[i];
+       		 System.out.println(sum);
+       		 count++;
+       		 System.out.println("count is:"+count);
+       		 }
+  		  }
+		}
+OUTPUT:
+1
+1
+count is:1
+4
+5
+count is:2
+5
+10
+count is:3
+8
+18
+count is:4
+9
+27
+count is:5
+
+MULTIDIMENSIONAL ARRAY:
+	*A multidimensional array is an array of arrays.
+	*Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.
+	*To create a two-dimensional array, add each array within its own set of curly braces:
+
+EXAMPLE CODE:
+class Main {
+    public static void main(String[] args) {
+        int arr[][]={{1,4,5,8,9},{11,12,13,14,}};
+        for(int i=0;i<arr.length;++i){
+        for(int j=0;j<arr[i].length;++j){
+            System.out.print(arr[i][j]+"   "); 
+        }
+         System.out.println(" "); 
+        }
+    }
+}
+
+OUTPUT:
+1   4   5   8   9    
+11   12   13   14    
+
+=== Code Execution Successful ===
+
+STRING HANDLING AND MANIPULATIONS:
+		*String is a sequence of characters that are stored in a packages.
+		*String in java are immutable.
+		*String is an objecty that represents a collection of character.
+		*A String variable contains a collection of characters surrounded by double quotes
+		*it is used to manupulate and handling the textual data.
+		*The strings as literal is stored in a literal pool and it is faster accessing,allows duplications.
+		*The strings as object using new keyword is stored in a heap memory,prevents from duplications and accessing is slower.
+		*There are many ways available in using strings :
+			-->toUpperCase():String txt = "Hello World";
+						System.out.println(txt.toUpperCase());
+			-->toLowerCase():String txt = "Hello World";
+						System.out.println(txt.toLowerCase());
+
+EXAMPLE: LOWERCASE AND UPPERCASE:
+	class Main {
+    public static void main(String[] args) {
+        String txt = "Hello World";
+         System.out.println(txt.toUpperCase());
+         System.out.println(txt.toLowerCase());
+
+    }
+}
+
+OUTPUT:
+	HELLO WORLD
+	hello world
+=== Code Execution Successful ===
+
+USES OF STRINGS:
+	*To store and manipulate textual data.
+	*it is sommonly used for input/output file handling and data processing.
+
+DECLARATION  AND INITIALIZATION OF STRINGS:
+		* TWO WAYS TO DECALRE:LITERAL AND NEW KEYWORD.
+
+USING LITERAL :
+       String str="hello"; [stores in literal pool]
+USING NEW KEYWORD:
+	String str=new String("hello");[stores in heap memory].
+
+EXAMPLE: TO COMPARE TWO STRINGS THAR ARE STORED IN DIFFERENT MEMORY.
+
+	public static void main(string[]args){
+		string str="hello";
+ 		string str1=new string("hello");
+		system.out.println(str1==str2);
+		system.out.println(str1.equals(str2));
+}
+}
+
+OUTPUT:
+ true
+==code execution successfull==
+
+NOTE: equals()	Compares two strings. Returns true if the strings are equal, and false if not	boolean
+NOTE: equalsIgnoreCase()	Compares two strings, ignoring case considerations	boolean
+
+EXAMPLE:
+	class Main {
+    public static void main(String[] args) {
+        String str1="java";
+        String str2="java";
+        System.out.println("Case-sensitive equals:"+str1.equals(str2));
+        System.out.println("Case-insensitive equals:"+str1.equalsIgnoreCase(str2));
+    
+    }
+}
+
+OUTPUT:
+	Case-sensitive equals:true
+	Case-insensitive equals:true
+	=== Code Execution Successful ===
+
+FINDING A CHARACTER IN A STRING:
+
+	*The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):
+EXAMPLE:
+	String myStr = "Hello, World!";
+	System.out.println(myStr.substring(7, 12));
+
+REPLACING CHARACTERS IN STRING:
+
+class Main {
+    public static void main(String[] args) {
+        String str1="java programming";
+        System.out.println(str1.replace('a','x'));
+    }
+}
+
+OUTPUT:
+ jxvx progrxmming
+
+SUBSTRING:
+	-->The substring() method returns a substring from the string.
+	-->If the end argument is not specified then the substring will end at the end of the string.
+
+EXAMPLE:
+class Main {
+    public static void main(String[] args) {
+        String myStr = "Hello, World!";
+        System.out.println(myStr.substring(7, 12));
+
+    }
+}
+
+OUTPUT:
+
+	World
+=== Code Execution Successful ===
+
+INDEXING:
+	-->The indexOf() method returns the position of the first occurrence of specified character(s) in a string.
+	-->Tip: Use the lastIndexOf method to return the position of the last occurrence of specified character(s) in a string.
+
+EXAMPLE:
+	class Main {
+   		 public static void main(String[] args) {
+       		 String myStr = "Hello planet earth, you are a great planet.";
+      		   System.out.println(myStr.indexOf("planet"));
+  		  }
+		}
+OUTPUT:
+	6
+=== Code Execution Successful ===
+
+TRIMMING IN A STRING:
+
+	*The trim() method removes whitespace from both ends of a string.
+	* Note: This method does not change the original string.
+Syntax:
+public String trim();
+
+EXAMPLE:
+
+class Main {
+    public static void main(String[] args) {
+       String myStr = "       Hello World!       ";
+         System.out.println(myStr);
+         System.out.println(myStr.trim());
+
+    }
+}
+
+OUTPUT:
+	 	Hello World!       
+	  Hello World!
+
+=== Code Execution Successful ===
+
+REVERSE A STRING:
+
+EXAMPLE: reverse a string by characters.
+class Main {
+    public static void main(String[] args) {
+       String originalStr = "Hello";
+        String reversedStr = "";
+
+        for (int i = 0; i < originalStr.length(); i++) {
+         reversedStr = originalStr.charAt(i) + reversedStr;
+        }
+
+        System.out.println("Reversed string: "+ reversedStr);
+
+    }
+}
+
+OUTPUT:
+
+Reversed string: olleH
+=== Code Execution Successful ===
+
+WRAPPER CLASSES:
+	*Wrapper classes in java provide a way to use primitive data types.
+
+Primitive Data Type	Wrapper Class
+byte				Byte
+short				Short
+int				Integer
+long				Long
+float				Float
+double				Double
+boolean				Boolean
+char				Character
+
+
+EXAMPLE:
+	public class Main {
+ 	 public static void main(String[] args) {
+   	 Integer myInt = 5;
+    		Double myDouble = 5.99;
+    		Character myChar = 'A';
+    		System.out.println(myInt);
+    		System.out.println(myDouble);
+    		System.out.println(myChar);
+ 	 }
+	}
+
+OUTPUT:
+5
+5.99
+A
+
+NOTE: toString() method, which is used to convert wrapper objects to strings.
+
+EXAMPLE:
+public class Main {
+  public static void main(String[] args) {
+    Integer myInt = 100;
+    String myString = myInt.toString();
+    System.out.println(myString.length());
+  }
+}
+OUTPUT:
+	3
+=== Code Execution Successful ===
+
+STRING TO GET CHARACTER:
+	*We use nextLine() function in Scanner class to get the character individually.
+EXAMPLE:
+	import java.util.*; // [* used to include all the packages in util]
+class Main {
+    public static void main(String[] args) {
+        Scanner ref=new Scanner(System.in);
+        System.out.println("Enter your char value");
+        char ch=ref.nextLine().charAt(0);
+        System.out.println(ch);
+    }
+}
+
+OUTPUT:
+	Enter your char value
+xyz
+x
+
+STRING BUILDER:
+	* StringBuilder class creates a modificiable objects.(mutable)
+	*It is asynchronized,that can also handle multiple calls,but exception on threads can happens unexpectedly.
+
+	-->APPEND(String str): APPENDS A STRING AT THE END.
+	-->INSERT(int offset,String str): INSERTS A STRING AT THE SPECIFIC POSITION.
+	-->REPLACE(int start,int end,String str): REPLACES CHARACTERS WITHIN A RANGE.
+	-->REVERSE(): REVERSE THE STRING.
+
+STRING BUFFER:
+  	*It is synchronized,it can handle multiple calls and threads with security.
+
+
+OOPS CONCEPT IN JAVA:
+
+CLASS:
+	* A Class is like an object constructor, or a "blueprint" or "definition block" for creating objects in java.
+	* It contains states and behaviours and states refer to "data member"(variable),whereas
+behaviour refers to "member function".
+	*To create a class, use the keyword class:
+EXAMPLE:
+public class Main {
+  int x = 5;
+}
+
+OBJECTS:
+	* Objects are real world entity,that holds its own states and behaviour.
+	* An object is created from a class.
+	*To create an object of Main, specify the class name, followed by the object name, and use the keyword new.
+
+Calling of Static class in Main method:
+
+EXAMPLE:
+class Main {
+    public static void main(String[] args) {
+        Objectoriented ref=new Objectoriented();
+        System.out.println("Nonstatic var:"+ref.name);
+        System.out.println("Nonstatic var:"+ref.Rollno);
+        System.out.println("static var:"+Objectoriented.a);
+        Objectoriented.Display();
+    }
+}
+class Objectoriented {
+    String name="java";
+    String Rollno="12CA01";
+    static int a=10;
+    public static void Display(){
+        System.out.println("static Methods");
+    }
+}
+
+OUTPUT:
+
+Nonstatic var:java
+Nonstatic var:12CA01
+static var:10
+static Methods
+=== Code Execution Successful ===
+
+
+JAVA CONSTRUCTORS:
+
+CONSTRUCTOR:
+	*A constructor in Java is a special method that is used to initialize objects.
+	* The constructor is called when an object of a class is created.
+ 	*A Construtor doesn't allows access modifiers and also return types
+DEFAULT CONSTRUCTOR:
+ 
+EXAMPLE:
+ 	class Main {
+    public static void main(String[] args) {
+        Sample ref=new Sample(); 
+    }
+}
+class Sample{
+    Sample() //DEFAULT CONSTRUCTOR{
+        System.out.println("Default constructor");
+    }
+    }
+
+OUTPUT:
+	Default constructor
+=== Code Execution Successful ===
+
+PARAMETIZED CONSTRUCTOR:
+
+EXAMPLE:
+class Main {
+    public static void main(String[] args) {
+        Sample ref=new Sample("Tesla","v5");
+ 	Sample ref1=new Sample("Lamborgini","M5");
+        System.out.println(ref.carname);
+        System.out.println(ref.carmodel);
+	System.out.println(ref1.carname);
+        System.out.println(ref1.carmodel);
+       
+    }
+}
+class Sample{
+        String carname;
+        String carmodel;
+        Sample(String carname,String carmodel) {
+            this.carname=carname;
+            this.carmodel=carmodel;
+        System.out.println("Default constructor");
+    }
+    }
+
+OUTPUT:
+	Default constructor
+	Default constructor
+	Tesla
+	V5
+	Lamborgini
+	M5
+=== Code Execution Successful ===
+	
