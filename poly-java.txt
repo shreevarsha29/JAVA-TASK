@@ -1,0 +1,28 @@
+polymorphism :
+
+package PROGRAM;
+
+class Employee {
+    
+    void pay1(double fixedSalary) {
+    	
+        System.out.println("Part-time employee: " + fixedSalary);
+    }
+    void pay(double hourswork,int perhour) {
+    	double totalSalary = hourswork * perhour;
+        System.out.println("Full-time employee: " + hourswork);
+    }
+    
+    void pay(double freelancers) {
+        System.out.println("full-time employee: " + freelancers);
+    }
+}
+
+public class Salarycal{
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        emp.pay(30000.0);  
+        emp.pay(20.0); 
+        emp.pay1(15000.0); 
+    }
+}
